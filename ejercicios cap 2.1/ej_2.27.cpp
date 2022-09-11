@@ -3,11 +3,11 @@
 #include <iostream>
 
 int main(){
-    char value=10;
+    char value;
     using namespace std;
-    /*
     cout<<("Ingrese su valor: \n");
-    cin>>(value);
-    */
-    cout<<static_cast<int>(value);
+    cin>>value;
+    cout<<static_cast<int>(value)<<endl;
+
+    return 0
 }
