@@ -34,7 +34,7 @@ int main(){
         <<account2.getBalance();
     
     cout << "\n\nEnter the amount you want to withdwraw account1: ";
-    float getWithdraw{20};
+    float getWithdraw;
     cin >> getWithdraw;
     account1.withdraw(getWithdraw);
 
