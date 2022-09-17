@@ -1,5 +1,5 @@
 #include <iostream>
-#include "ej_3.9.cpp"
+#include "ej_3.9.h"
 
 using namespace std;
 
@@ -34,7 +34,7 @@ int main(){
         <<account2.getBalance();
     
     cout << "\n\nEnter the amount you want to withdwraw account1: ";
-    float getWithdraw;
+    float getWithdraw{20};
     cin >> getWithdraw;
     account1.withdraw(getWithdraw);
 
