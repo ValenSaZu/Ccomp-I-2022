@@ -1,16 +1,26 @@
 #include <iostream>
 
-int main(){
-    int fib=1;
-    int fib2=1;
-    int fib3=1;
-    int sum{0};
-    while (fib3<=10){
-        fib3=fib+fib2
-        fib=fib2;
-        fib2=fib3;
-        //sum= sum + fib3;
-        std::cout<<fib3<<"  ";
+    int fibonacci (int n) {
+        if (n==0 || n==1){
+            return 1;
+        } else {
+            return fibonacci(n-2)+fibonacci(n-1);
+        }
     }
-    //std::cout<<"\n"<<sum;
-}
+
+    int main (){
+        int num = 4000000;
+        int counter = 1;
+        int sum = 0;
+        while (fibonacci(counter)<num){
+            if (fibonacci(counter)%2==0){
+                sum+=fibonacci(counter);
+            }
+            ++counter;
+        }
+        
+        std::cout << sum;
+        return 0;
+    }
+
+    //4613732
