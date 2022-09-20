@@ -1,7 +1,7 @@
 #include <iostream>
 
-int numero_primo(int num){
-    unsigned int sum{0};
+unsigned long long int numero_primo(unsigned long long int num){
+    unsigned long long int sum{0};
     for (int counter{1};counter<=num; counter=counter+1){
         if (num%counter==0){
             sum=sum+1;}
@@ -14,10 +14,10 @@ int numero_primo(int num){
     }
 }
 
-int mayor_factor_primo(unsigned long long int n){
-    int mayor{0};
-    int counter{2};
-    int factor{0};
+unsigned long long int mayor_factor_primo(unsigned long long int n){
+    unsigned long long int mayor{0};
+    unsigned long long int counter{2};
+    unsigned long long int factor{0};
     while (counter<=n){
         if (n%counter==0){
             factor=numero_primo(counter);
