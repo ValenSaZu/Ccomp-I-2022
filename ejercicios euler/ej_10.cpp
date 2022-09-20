@@ -1,27 +1,18 @@
 #include <iostream>
-
-unsigned long long int numero_primo(unsigned long long int num){
-    unsigned long long int sum{0};
-    for (unsigned long long int counter{1};counter<=num; counter=counter+1){
+long long Primo(long long num){
+    long long int sum{0};
+    for (long long counter{2};counter<num; ++counter){
         if (num%counter==0){
-            sum=sum+1;}
+            return 0;}
     }
-    if (sum==2){
-        return num;
-    }
-    else{
-        return 0;
-    }
+    return num;
 }
 
 int main(){
-    unsigned long long int sum = 0;
-    unsigned long long int num = 2;
-    while (num<2000000){
-        sum+=numero_primo(num);
-        num=num+1;
+    long long sum = 0;
+    for (long long num{2};num<2000000; ++num){
+        sum+=Primo(num);
     }
-
     std::cout<<sum;
     return 0;
 }
