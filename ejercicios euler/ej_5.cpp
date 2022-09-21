@@ -20,7 +20,7 @@ int multiplica(int n,int x){
         mult*=x;
         result+=1;
     }
-    return result;
+    return result-1;
 }
 
 int smallest_multiple(int n){
@@ -35,5 +35,7 @@ int smallest_multiple(int n){
 }
 
 int main(){
-    cout<<smallest_multiple(10);
+    cout<<smallest_multiple(20);
 }
+
+//232792560
