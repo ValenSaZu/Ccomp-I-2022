@@ -1,14 +1,12 @@
 #include <iostream>
 #include <math.h>
 using namespace std;
-int Primo(int num){
-    int sum{0};
-    for (int counter{2};counter<num; ++counter){
-        if(num==2){
-            return 2;
-        }
+int numero_primo(int num){
+    for (int counter{2};counter< num/2; counter++){
         if (num%counter==0){
-            return 0;}
+            return 0; }
+        if (num == 2){
+            return num; }
     }
     return num;
 }
