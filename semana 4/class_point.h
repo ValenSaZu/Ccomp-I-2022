@@ -1,6 +1,9 @@
 
 #ifndef __POINT_H__
 #define __POINT_H__
+#include <iostream>
+
+using namespace std;
 
 class Point {
     public:
@@ -18,6 +21,10 @@ class Point {
         int getY() const {
             return y;
         }
+
+        void print () const {
+            cout << "("<< x <<", "<< y <<")"<<endl;
+            }
         
     private:
         int x,y ;

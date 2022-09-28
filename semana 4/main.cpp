@@ -23,6 +23,11 @@ int main() {
     imprimirPoint(p1);
     modificar(9, 2, p1);
     imprimirPoint(p1);
+
+    Point p2(5, 6);
+    Point &ref = p2;
+
+    p2.print();
     return 0;
 
     int a = 10;
