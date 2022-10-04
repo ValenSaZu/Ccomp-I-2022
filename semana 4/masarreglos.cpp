@@ -9,13 +9,6 @@ void printArray (const int array[], int tam){
 	cout <<"]"<<endl;
     }
 }
-void printArrayPoint (const Point array[], int tam){
-	cout << "[";
-	for(int i=0; i<tam; i++){
-		array[i].print();
-	cout <<"]"<<endl;
-    }
-}
 void intercambio(int &a, int &b){
     int other = a;
     a = b;
@@ -27,6 +20,29 @@ void bsort(int array[],int tam) {
         for(int j=i+1; j<tam; j++){
             if (array[i] > array[j]){
                 intercambio (array[i], array[j]);
+            }
+        }
+    }
+}
+
+
+void printArrayPoint (const Point array[], int tam){
+	cout << "[";
+	for(int i=0; i<tam; i++){
+		array[i].print();
+	cout <<"]"<<endl;
+    }
+}
+void intercambioPoint(Point &a, Point &b){
+    Point other = a;
+    a = b;
+    b = other;
+}
+void bsortPoint (Point array[],int tam) {
+    for (int i{0}; i < tam; i++){
+        for(int j=i+1; j<tam; j++){
+            if (array[i].getX() > array[j].getX()){
+                intercambioPoint (array[i], array[j]);
             }
         }
     }
