@@ -48,6 +48,20 @@ void bsortPoint (Point array[],int tam) {
     }
 }
 
+void iSort(int array[], int tam){
+    int replace, second;
+    for (int first = 1, first<tam, first++){
+        replace = array[first];
+        second = first - 1;
+        while(second >= 0 && array[second] < replace ){
+            
+        }
+        replace = arra[second];
+        array[second] = array[second +1];
+    }
+}
+//crear el isort para puntos
+
 int main() {
 	int arreglo[] = {5,7,10,3,5};
 
