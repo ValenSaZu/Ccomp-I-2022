@@ -7,8 +7,12 @@ using namespace std;
 
 class Point {
     public:
-        Point(int _x, int _y) : x(_x), y(_y) {}
-
+        Point(int _x=0 , int _y = 0) : x(_x), y(_y) {
+            //cout <<"Constructor"<< endl;
+        }
+        ~Point(){
+            //cout<<"Destructor"<< endl;
+        }
         void setX(int _x){
             x = _x;
         }
