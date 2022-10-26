@@ -9,6 +9,16 @@ void printArray(const Point *array, int tam){
         array->print();
     cout<<"]";
 }
+
+void printArrayRec(const Point *array, int tam) {
+    if( tam <= 0 ) {
+        return;
+    } else {
+        array->print();
+        printArrayRec(++array, --tam);
+    }
+}
+
 int main(){
     Point p1;
     Point p2(2,3);
@@ -28,6 +38,7 @@ int main(){
     arreglo[4] = p5;
 
     printArray(arreglo, 5);
+    printArrayRec(arreglo,5);
 
     delete[] arreglo;
 return 0;
